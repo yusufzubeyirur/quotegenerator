@@ -15,7 +15,12 @@ export default function App() {
   const getNewQuote = () => {
     if (quotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * quotes.length);
-      setQuote(quotes[randomIndex]);
+      const newQuote = quotes[randomIndex];
+      // type.fit yazısını kaldırmak ıcın replace şekli.
+      const author = newQuote.author
+        ? newQuote.author.replace(", type.fit", "")
+        : "Unknown";
+      setQuote({ text: newQuote.text, author: author });
     }
   };
 
@@ -31,7 +36,12 @@ export default function App() {
       <div className={styles.quotecontainer}>
         <button onClick={getNewQuote}>New Quote</button>
         <div className={styles.quote}>
-          <p>"{quote.text}"</p>
+          <p>
+            <span>
+              {" "}
+              <em>"{quote.text}"</em>{" "}
+            </span>
+          </p>
           <p className={styles.author}>- {quote.author || "Unknown"}</p>
         </div>
       </div>
