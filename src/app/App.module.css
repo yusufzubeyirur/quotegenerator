@@ -1,0 +1,44 @@
+/* App.module.css */
+
+.container {
+    background-color: orange;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .headingcontainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading {
+    color: black;
+    font-size: 2rem;
+  }
+  
+  .quotecontainer {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .quote {
+    margin: 0; /* Üst ve alt boşlukları kaldırarak butonla hizalamak için */
+  }
+  
+  .author {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
